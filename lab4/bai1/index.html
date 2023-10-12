@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+
+        }
+        #app{
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ul class="list"></ul>
+    </div>
+    <script>
+        const app = document.getElementById("app")
+        const list = document.querySelector('.list')
+        const arrColor = ['#2596be','#052b65','#f78c45','#f6e1a9', '#333', '#deedf0']
+        const map =arrColor.map((item, index)=>{
+            return `<li class='item'><button class='btn'>Button ${index}</button></li>`
+        })
+        list.innerHTML = map.join('')
+        const changeBr = ()=>{
+            const item  = Array.from(document.querySelectorAll('.btn'))
+            item.forEach((e, index) =>{
+                console.log(e);
+                e.addEventListener('click',()=>{
+                    app.style.backgroundColor = arrColor[index]
+                    
+            
+                }) 
+            })
+        }
+        changeBr()
+       
+    </script>
+</body>
+</html>

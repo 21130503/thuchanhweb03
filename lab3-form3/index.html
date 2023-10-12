@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="inner">
+            <div class="account">
+                <h4 class="green-cl">Account</h4>
+                <div class="input flex">
+                    <span class="icon"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" placeholder="Full Name">
+                </div>
+                <div class="input flex">
+                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="text" placeholder="Email Address">
+                </div>
+                <div class="input flex">
+                    <span class="icon"><i class="fa-solid fa-key"></i></span>
+                    <input type="text" placeholder="Password">
+                </div>
+            </div>
+            <div class="birth-gender flex a-center j-between">
+                <div class="birth">
+                    <h4 class="green-cl">Date of birth</h4>
+                    <div class="mt-10 d-m-y" >
+                        <input type="text" placeholder="DD" class="birth-item">
+                        <input type="text" placeholder="MM" class="birth-item">
+                        <input type="text" placeholder="YYYY" class="birth-item">
+                    </div>
+                </div>
+                <div class="gender">
+                    <h4 class="green-cl">Gender</h4>
+                    <div class="flex mt-10 gender__wrapper j-between">
+                        <div class="gender-item">Male</div>
+                        <div class="gender-item">Female</div>
+                    </div>
+                </div>
+            </div>
+            <div class="payment-wrapper">
+                <h4 class="green-cl">Payment Details</h4>
+                <div class="payment flex">
+                    <div class="payment-item active">
+                        <span><i class="fa-brands fa-cc-visa"></i></span>
+                        <span>Credit card</span>
+                    </div>
+                    <div class="payment-item">
+                        <span><i class="fa-brands fa-cc-paypal"></i></span>
+                        <span>Paypal</span>
+                    </div>
+                </div>
+                <div class="input flex">
+                    <span class="icon"><i class="fa-solid fa-credit-card"></i></span>
+                    <input type="text" placeholder="Card Number">
+                </div>
+                <div class="card flex a-center">
+                    <div class="card-input flex">
+                        <span class="icon-card"><i class="fa-solid fa-user"></i></span>
+                        <input type="text" name="" id="" placeholder="Card CVC">
+                    </div>
+                   <div class="select-wrapper flex a-center j-center">
+                        <select name="" id="">
+                            <option value="1">01 JAN</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="1">2015</option>
+                            <option value="2">2016</option>
+                            <option value="3">2017</option>
+                            <option value="4">2018</option>
+                            <option value="5">2019</option>
+                        </select>
+                   </div>
+                </div>
+            </div>
+            <div class="footer">
+                <h4 class="green-cl ">Terms and Conditions</h4>
+                <p class="policy mt-10 flex">
+                    <input type="checkbox" name="" id="#checkbox">
+                    <label for="#checkbox">I accept terms and condition for singing up to this service,
+                        and hereby confirm I have read the privacy policy
+                    </label>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#id{
+    /* border: 10px solid #e6e6e6; */
+    height: 650px;
+    width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6e6e6;
+}
+
+.inner{
+    border-radius: 5px;
+    background-color: #fff;
+    width: 500px;
+    padding: 25px 40px;
+}
+
+.title{
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.infor-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.infor{
+    background-color: #f7f7f7;
+    padding: 10px 15px;
+    border-radius: 10px;
+    flex:  1 1;
+    border: 1px solid #f1f1f1;
+}
+label{
+    display: block;
+    font-size: 10px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+input{
+    display: block;
+    width: 100%;
+    color: #333;
+    padding: 5px 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+.select{
+    width: 100%;
+    padding: 5px 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+.select option{
+    color: #333;
+}
+.choose{
+    flex: 1 1 ;
+    font-size: 14px;
+    font-weight: normal;
+}
+.infor.message{
+    background-color: #fff;
+}
+textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #333;
+    font: message-box;
+}
+.button{
+    padding: 8px 10px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.button span {
+    margin-left: 5px;
+}

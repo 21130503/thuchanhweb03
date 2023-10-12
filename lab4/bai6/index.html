@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="inner">
+        <h1 class="title">Sign in</h1>
+        <form action="get" class="form">
+           <div class="form-item" id="form-item-1"> 
+                <input type="text" placeholder="username or email" id="email">
+                <span class="email-check"></span>
+            </div>
+            <div class="form-item" id="form-item-2">
+                <input type="password" placeholder="password" id="password">
+                <span class="password-check"></span>
+            </div>
+            <button type="submit" id="submit">Sign in</button>
+        </form>
+         <div class="athoner-login">
+            <span>Or login with</span>
+            <ul class="list">
+                <li class="item"><a href="" class="link">
+                    <img src="./asset/face.png" alt="" class="img-logo">
+                </a></li>
+                <li class="item"><a href="" class="link">
+                    <img src="./asset/gg.png" alt="" class="img-logo">
+                </a></li>
+            </ul>
+         </div>
+         <div class="register">
+            <a href="#">Sign up</a>
+         </div>
+    </div>
+    <script>
+            // const regexEmail = ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$
+            const $  =document.querySelector.bind(document)
+            const btnSubmit = $('#submit')
+            const form = $('.form')
+            
+            form.addEventListener('submit', (e)=>{
+                e.preventDefault()
+            })
+            form.onSubmit= (e)=>{
+                e.preventDefault()
+            }
+            function validation(){
+                const inputPass = $('#password') 
+                const  inputPassword = $('#password').value
+                const spanPassword = $('.password-check')
+                const formPassword = $('#form-item-2')
+                const regexPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/;
+                // Email
+                const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+                const emailValue = $('#email').value
+                const email = $('#email')
+                const spanEmail = $('.email-check')
+                if(inputPassword.length < 5) {
+                    spanPassword.textContent = '*Mật khẩu phải lớn hơn 5'
+                    inputPass.classList.add('validation')
+                    return false;
+                }
+                if(!regexPass.test(inputPassword)){
+                    spanPassword.textContent = 'Mật khẩu phải đảm bảo chữ in, thường và kí tự đặc biệt'
+                    inputPass.classList.add('validation')
+                    return false
+                }
+                if(!regexEmail.test(emailValue)){
+                    email.classList.add('validation')
+                    spanEmail.textContent = '*Giá trị không phải là Email'
+
+                }
+                inputPass.addEventListener('click', ()=>{
+                    inputPass.classList.remove('validation')
+                })
+                email.addEventListener('click' , ()=>{
+                    email.classList.remove('validation')
+
+                })
+
+                return true;
+            }
+            btnSubmit.addEventListener('click', ()=>{
+                validation()
+            })
+    </script>
+</body>
+</html>

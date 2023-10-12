@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const app = document.getElementById('app')
+        let currentNumber = 1;
+    function createBtn(){
+            for(let i = 0; i< 64 ; i++){
+               const btn =  document.createElement('button')
+               btn.textContent =i+1
+               app.appendChild(btn)
+               btn.addEventListener('click', ()=>{
+                if(+btn.innerHTML === currentNumber){
+                    btn.remove()     
+                    currentNumber++
+                    if(currentNumber > 64){
+                        alert('Success')
+                    }
+                }
+                else{
+                    alert('Fail')
+                }
+               })
+            }
+        }
+        createBtn()
+    </script>
+</body>
+</html>
